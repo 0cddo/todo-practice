@@ -19,6 +19,12 @@ const Todo = () => {
     setInputs('');
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSubmit();
+    }
+  };
+
   const handleDelete = (id) => {
     // todo.id 와 지워주기위해 누른 id가 같은 함수를 제외한 나머지 함수를 배열에 넣고 렌더링해줌 (즉 지워줌)
     setTodos(todos.filter((todo) => todo.id !== id));
@@ -32,6 +38,7 @@ const Todo = () => {
         placeholder="할 일을 입력하세요"
         value={inputs}
         onChange={onChange}
+        onKeyDown={handleKeyDown}
       />
       <button onClick={handleSubmit}>Add</button>
       <ul>
