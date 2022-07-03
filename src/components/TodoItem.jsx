@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const TodoItem = ({ todo, handleDelete }) => {
   return (
     <Item>
-      <li>{todo}</li>
-      <Button onClick={handleDelete}>delete</Button>
+      <li>{todo.item}</li>
+      <Button onClick={() => handleDelete(todo.id)}>delete</Button>
     </Item>
   );
 };
