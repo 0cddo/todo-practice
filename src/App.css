@@ -1,7 +1,20 @@
+.itemBoard {
+  display: flex;
+  margin: 10px 0;
+}
+
 .checked {
+  list-style: none;
+  margin-right: 5px;
+}
+
+button {
+  margin-left: 5px;
 }
 
 .unchecked {
   color: gray;
   text-decoration: line-through;
+  list-style: none;
+  margin-right: 5px;
 }
