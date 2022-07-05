@@ -7,19 +7,20 @@ const TodoItem2 = ({ setTodos, todos, todo, handleDelete }) => {
   //   checkbox 함수
   const handleChecked = (id) => {
     setTodos(
-      [...todos].map((todo) => {
+      todos.map((todo) => {
         if (todo.id === id) {
           todo.isChecked = !todo.isChecked;
         }
         return todo;
       })
     );
+    console.log(todos);
   };
 
   //   수정 함수
   const handleEditSubmit = (id) => {
     setTodos(
-      [...todos].map((todo) => {
+      todos.map((todo) => {
         if (todo.id === id) {
           todo.text = editText;
         }
@@ -71,7 +72,7 @@ const TodoItem2 = ({ setTodos, todos, todo, handleDelete }) => {
       {todo.id === edit ? (
         <button onClick={() => handleEditSubmit(todo.id)}>완료</button>
       ) : (
-        <button onClick={() => setEdit(todo.id)}>수정</button>
+        <button onClick={() => handleEdit(todo.id)}>수정</button>
       )}
       <button onClick={() => handleDelete(todo.id)}>삭제</button>
     </div>
