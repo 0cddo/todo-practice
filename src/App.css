@@ -3,7 +3,7 @@
   margin: 10px 0;
 }
 
-.checked {
+.unchecked {
   list-style: none;
   margin-right: 5px;
 }
@@ -12,7 +12,7 @@ button {
   margin-left: 5px;
 }
 
-.unchecked {
+.checked {
   color: gray;
   text-decoration: line-through;
   list-style: none;
